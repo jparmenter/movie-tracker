@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', [
+angular.module('movieTracker', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -11,6 +11,10 @@ angular.module('app', [
       .when('/', {
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
+      })
+      .when('/movie/:id', {
+        templateUrl: 'partials/movie',
+        controller: 'MovieCtrl'
       })
       .otherwise({
         redirectTo: '/'
