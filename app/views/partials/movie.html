@@ -1,4 +1,9 @@
 <div>
-  <h4>{{movie.original_title}}</h4>
+  <h5>{{movie.original_title}}</h5>
   <p>{{movie.overview}}</p>
+  <br/>
+  <div ng-repeat="actor in credits.cast">
+    <h4>{{actor.character}}</h4>
+    <p>{{actor.name}}</p>
+  </div>
 </div>
