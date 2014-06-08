@@ -1,9 +1,21 @@
-<div>
-  <h5>{{movie.original_title}}</h5>
-  <p>{{movie.overview}}</p>
-  <br/>
-  <div ng-repeat="actor in credits.cast">
-    <h4>{{actor.character}}</h4>
-    <p>{{actor.name}}</p>
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="http://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">{{movie.original_title}}</h4>
+    <p>{{movie.overview}}</p>
+    <p>Release Date: {{movie.release_date}}</p>
   </div>
+</div>
+<div>
+  <h4>Cast</h4>
+  <table class="table table-stripped table-condensed">
+    <tbody>
+      <tr ng-repeat="actor in credits.cast">
+        <td>{{actor.character}}</td>
+        <td>{{actor.name}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
