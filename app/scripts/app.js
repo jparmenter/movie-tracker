@@ -16,6 +16,10 @@ angular.module('movieTracker', [
         templateUrl: 'partials/movie',
         controller: 'MovieCtrl'
       })
+      .when('/searchResults/:q', {
+        templateUrl: 'partials/searchResults',
+        controller: 'SearchResultsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

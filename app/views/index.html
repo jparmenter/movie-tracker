@@ -9,8 +9,11 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-app="movieTracker">
+    <div ng-include="'/partials/navbar'"></div>
+    <div class="container" ng-include="'/partials/search'"></div>
     <div class="container" ng-view=""></div>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -24,9 +27,13 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/movie.js"></script>
+    <script src="scripts/controllers/navbar.js"></script>
+    <script src="scripts/controllers/search.js"></script>
+    <script src="scripts/controllers/searchResults.js"></script>
     <script src="scripts/factory/releasesFactory.js"></script>
     <script src="scripts/factory/movieFactory.js"></script>
     <script src="scripts/factory/creditsFactory.js"></script>
     <script src="scripts/factory/imageRepoFactory.js"></script>
+    <script src="scripts/factory/movieSearchFactory.js"></script>
   </body>
 </html>
