@@ -1,4 +1,5 @@
-<div class="media" ng-repeat="movie in nowPlaying.results">
+<div class="container">
+  <div class="media" ng-repeat="movie in nowPlaying.results">
     <a class="pull-left" href="/movie/{{movie.id}}">
       <img class="media-object" src="http://image.tmdb.org/t/p/w92{{movie.poster_path}}" alt="">
     </a>
@@ -6,4 +7,5 @@
       <h4 class="media-heading">{{movie.original_title}}</h4>
       <p>Release Date: {{movie.release_date}}</p>
     </div>
+  </div>
 </div>
