@@ -7,7 +7,7 @@ angular.module('movieTracker')
         $scope.title = movie.original_title;
         $scope.releaseDate = movie.release_date;
         $scope.overview = movie.overview;
-        $scope.posterImg = movie.poster_path;
+        $scope.posterImg = 'http://image.tmdb.org/t/p/w185' + movie.poster_path;
         $scope.runtime = movie.runtime;
 
         var genreString = '';
@@ -18,6 +18,16 @@ angular.module('movieTracker')
       });
 
     creditsFactory.getCredits($routeParams.id).success(function(creditsResponse) {
-        $scope.credits = creditsResponse;
+        $scope.cast = [];
+        var credits = creditsResponse;
+        var cast = credits.cast;
+
+        cast.forEach(function(actor) {
+          var profile = '';
+          if (actor.profile_path) {
+            profile = 'http://image.tmdb.org/t/p/w45' + actor.profile_path;
+          }
+          $scope.cast.push({name: actor.name, character: actor.character, img: profile});
+        });
       });
   }]);
