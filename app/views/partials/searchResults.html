@@ -1,9 +1,11 @@
-<div class="media" ng-repeat="movie in searchResults">
-    <a class="pull-left" href="/movie/{{movie.id}}">
-      <img class="media-object" src="{{movie.poster}}" alt="">
-    </a>
-    <div class="media-body">
-      <h4 class="media-heading">{{movie.name}}</h4>
-      <p>Release Date: {{movie.release}}</p>
-    </div>
+<div class="container">
+  <div class="media" ng-repeat="movie in searchResults">
+      <a class="pull-left" href="/movie/{{movie.id}}">
+        <img class="media-object" src="{{movie.poster}}" alt="">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">{{movie.name}}</h4>
+        <p>Release Date: {{movie.release}}</p>
+      </div>
+  </div>
 </div>
